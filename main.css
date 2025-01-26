@@ -7,27 +7,26 @@ img{
 }
 
 body{
-  background:hotpink;
-  color:white;
+  background:#dbe6ba;
+  color:#343658;
   font-family: Arial, Helvetica, sans-serif;
+  background-attachment: fixed;
+  margin:0;
 }
 
-.container{
-  background:#363636;
-  width:90vw;
-  height:200vh;
-  margin:auto;
-  margin-top:50px;
-  margin-bottom:50px;
-  border-radius: 10px;
+hr{
+  color:#343658;
+  background-color: #343658;
+  border-color: #343658;
 }
 
 .header{
   display:flex;
   height:100px;
-  padding: 60px 100px;
+  margin-left: 35%;
   align-items:center;
   justify-content: space-between;
+  /* background:pink; */
 }
 
 .nav{
@@ -36,18 +35,44 @@ body{
 }
 
 a{
-  color:white;
+  color:#343658;
   /* font-weight: bold; */
   text-decoration: none;
 }
 
-.nav a:hover {
-  color: hotpink;
+a:hover {
+  color: #9ea720;
 }
 
-.body{
+.container{
+  display:flex;
+}
+
+.sidemenu{
+  width:25%;
+  position:fixed;
+  padding-left:50px;
+  /* background:orange; */
+}
+
+.sidemenu h3{
+  padding-left: 20px;
+}
+
+.sidemenu ol{
+  padding-left: 60px;
+}
+
+.workcontainer{
   display:flex;
   flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+  position: absolute;
+  width:75%;
+  margin-left:25%;
+  border-left: 2px solid #343658;
+  /* background:red; */
 }
 
 .work{
@@ -55,13 +80,69 @@ a{
   vertical-align: top;
   display: inline-block;
   text-align: center;
-  margin: 5%;
-  height: 300px;
+  margin: 15px;
+  height: 500px;
+  width: 30%;
   justify-content: center;
   text-align: center;
-
+  /* background:blueviolet; */
 }
 
 .display{
-  height:400px;
+  height:450px;
+}
+
+/* Resume Page CSS */
+
+.resumebox{
+  display:flex;
+  justify-content: center;
+  margin-left:25%;
+  width:75%;
+  height:100vh;
+  border-left: 2px solid #343658;
+}
+
+iframe{
+  height:100vh;
+  width:75vh;
+}
+
+
+/* General Work Page Css */
+
+.workbox{
+  width:70%;
+  height:100vh;
+  margin-left:30%;
+  border-left: 2px solid #343658;
+}
+
+
+/* Branch CSS */
+
+.imgy{
+  height:85%;
+  width:100%;
+  display:flex;
+  gap:10px;
+  justify-content: center;
+}
+
+.mainpost{
+  width:40%;
+}
+
+.rightimgs{
+  width:37%;
+  display:flex;
+  flex-direction: column;
+}
+
+.topbranch{
+  width:100%;
+}
+
+.btmbranch{
+  width:100%;
 }
