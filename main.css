@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
   } 
 
 img{
@@ -7,142 +8,224 @@ img{
 }
 
 body{
-  background:#dbe6ba;
-  color:#343658;
-  font-family: Arial, Helvetica, sans-serif;
-  background-attachment: fixed;
   margin:0;
+  background-color: #FFFCF2;
+  color: #252422;
+  height: 100%;
 }
 
-hr{
-  color:#343658;
-  background-color: #343658;
-  border-color: #343658;
+#container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.header{
+header{
+  background-color: #82C4B2;
   display:flex;
-  height:100px;
-  margin-left: 35%;
-  align-items:center;
   justify-content: space-between;
-  /* background:pink; */
+  padding:30px calc(50vw - 630px);
 }
 
-.nav{
+.rightheader{
   display:flex;
-  gap:20px; 
+  align-items: center;
+  gap:30px;
 }
 
-a{
-  color:#343658;
-  /* font-weight: bold; */
+header a, footer a{
+  color:#252422;
+  font-weight: bold;
   text-decoration: none;
+  transition: .1s ease;
 }
 
-a:hover {
-  color: #9ea720;
+header a:hover, footer a:hover{
+  color: #FFFCF2;
 }
 
-.container{
-  display:flex;
+#workbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin:auto;
+  width:1300px;
+
+  transition: .25s ease;
 }
 
-.sidemenu{
-  width:25%;
-  position:fixed;
-  padding-left:50px;
-  /* background:orange; */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 7px;
 }
 
-.sidemenu h3{
-  padding-left: 20px;
+.column img{
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 70vw;
 }
 
-.sidemenu ol{
-  padding-left: 60px;
+.image{
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .25s ease;
+  margin: auto;
+}
+
+.workcontainer:hover .image{
+  opacity:.4;
+}
+
+.workcontainer:hover  .text{
+  opacity:1;
 }
 
 .workcontainer{
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  justify-content:space-evenly;
-  position: absolute;
-  width:75%;
-  margin-left:25%;
-  border-left: 2px solid #343658;
-  /* background:red; */
+  background-color: #39403F;
+  position:relative;
 }
 
-.work{
+.text{
+  color:#FFFCF2;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:2;
+  opacity:0;
+  transition: .25s ease;
+
+  text-align: center;
+  font-size: 240%;
+}
+
+.workcontainer a{
+  color:#FFFCF2;
+  text-decoration: none;
+}
+
+footer{
+  margin-top: 50px;
+  background-color: #82C4B2;
+  height:100px;
+  text-align:center;
   display: flex;
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-  margin: 15px;
-  height: 500px;
-  width: 30%;
+  align-items: center;
   justify-content: center;
-  text-align: center;
-  /* background:blueviolet; */
-}
+  bottom: 0;
+  width: 100%;
 
-.display{
-  height:450px;
-}
-
-/* Resume Page CSS */
-
-.resumebox{
-  display:flex;
-  justify-content: center;
-  margin-left:25%;
-  width:75%;
-  height:100vh;
-  border-left: 2px solid #343658;
-}
-
-iframe{
-  height:100vh;
-  width:75vh;
 }
 
 
-/* General Work Page Css */
 
-.workbox{
-  width:70%;
-  height:100vh;
-  margin-left:30%;
-  border-left: 2px solid #343658;
+@media screen and (max-width: 1450px) {
+  #workbox{
+    width:1000px
+  }
+  
+  header{
+    padding:30px calc(50vw - 490px);
+  }
 }
 
+@media screen and (max-width: 1000px) {
+  .column{
+    flex:100%;
+    width: 100%;
+    max-width: 100%;
+  }
 
-/* Branch CSS */
+  #workbox{
+    width:80vw;
+  }
 
-.imgy{
-  height:85%;
+  .image{
+    opacity:.5;
+  }
+  .text{
+    opacity: 1;
+  }
+
+  header{
+    padding:30px 12vw;
+  }
+}
+
+/* this section is for work pages workpage */
+
+.splashbackground{
+  width:100vw;
+  height:calc(99vh - 100px);
+  background:orange;
+  margin:0;
+  object-fit: cover;
+}
+
+.splashpic{
+  object-fit: cover;
   width:100%;
+  height:100%;
+}
+
+.workdisplay{
+  width:70%;
+  margin: auto;
+  /* background:lightgray; */
+}
+
+.worktitle{
+  text-align: center;
+  font-size: 200%;
+}
+
+.imagebox{
   display:flex;
+  flex-wrap: wrap;
   gap:10px;
   justify-content: center;
 }
 
-.mainpost{
-  width:40%;
+.imagebox img{
+  flex:48%;
+  max-width: 48%;
 }
 
-.rightimgs{
-  width:37%;
+@media screen and (max-width: 1200px) {
+.imagebox img{
+  flex:100%;
+  max-width:100%;
+}
+}
+
+
+/* this section is for the about page */
+
+#info{
   display:flex;
-  flex-direction: column;
+  width: 60%;
+  margin:auto;
+  gap:20px;
+  height: calc(70vh - 100px);
+  align-items: center;
 }
 
-.topbranch{
-  width:100%;
+.abouttext{
+  flex:50%;
+  max-width: 70%;
+  width: 70%;
 }
 
-.btmbranch{
-  width:100%;
+.headshot{
+  /* display: flex;
+  justify-content: center; */
+  flex:30%;
+  max-width: 30%;
+  background-color: green;
+}
+
+.headshot img{
+
 }
