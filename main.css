@@ -217,6 +217,7 @@ footer{
   flex:50%;
   max-width: 70%;
   width: 70%;
+  padding-right: 50px;
 }
 
 .headshot{
@@ -227,6 +228,11 @@ footer{
 #aboutcontent{
   margin:auto;
   width: 60%;
+}
+
+
+.biotext{
+  font-size: 115%;
 }
 
 #iconhold{
