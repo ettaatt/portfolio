@@ -75,7 +75,7 @@ header a:hover, footer a:hover{
 }
 
 .workcontainer:hover .image{
-  opacity:.4;
+  opacity:.1;
 }
 
 .workcontainer:hover  .text{
@@ -83,12 +83,10 @@ header a:hover, footer a:hover{
 }
 
 .workcontainer{
-  background-color: #39403F;
   position:relative;
 }
 
 .text{
-  color:#FFFCF2;
   position:absolute;
   top: 50%;
   left: 50%;
@@ -96,6 +94,7 @@ header a:hover, footer a:hover{
   z-index:2;
   opacity:0;
   transition: .25s ease;
+  font-weight: bold;
 
   text-align: center;
   font-size: 240%;
@@ -152,6 +151,10 @@ footer{
   header{
     padding:30px 12vw;
   }
+
+  footer{
+    font-size: 90%;
+  }
 }
 
 /* this section is for work pages workpage */
@@ -205,11 +208,9 @@ footer{
 
 #info{
   display:flex;
-  width: 60%;
+  width:100%;
   margin:auto;
   gap:20px;
-  height: calc(70vh - 100px);
-  align-items: center;
 }
 
 .abouttext{
@@ -219,13 +220,26 @@ footer{
 }
 
 .headshot{
-  /* display: flex;
-  justify-content: center; */
   flex:30%;
   max-width: 30%;
-  background-color: green;
 }
 
-.headshot img{
-
+#aboutcontent{
+  margin:auto;
+  width: 60%;
 }
+
+#iconhold{
+  display:flex;
+  gap:30px;
+}
+
+.contacticon{
+  height:40px;
+  transition: .25s ease;
+}
+
+.contacticon:hover{
+  filter: brightness(0) saturate(100%) invert(22%) sepia(6%) saturate(604%) hue-rotate(122deg) brightness(95%) contrast(89%);
+}
+
