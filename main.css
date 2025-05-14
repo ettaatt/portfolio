@@ -101,7 +101,7 @@ header a:hover, footer a:hover{
 }
 
 .workcontainer a{
-  color:#FFFCF2;
+  color:#252422;
   text-decoration: none;
 }
 
@@ -142,7 +142,7 @@ footer{
   }
 
   .image{
-    opacity:.5;
+    opacity:.7;
   }
   .text{
     opacity: 1;
@@ -162,7 +162,7 @@ footer{
 .splashbackground{
   width:100vw;
   height:calc(99vh - 100px);
-  background:orange;
+  /* background:orange; */
   margin:0;
   object-fit: cover;
 }
